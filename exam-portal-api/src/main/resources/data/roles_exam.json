@@ -1,0 +1,18 @@
+[
+  {
+    "roleCode": "ADMIN",
+    "roleName": "ADMIN"
+  },
+  {
+    "roleCode": "USER",
+    "roleName": "USER"
+  },
+  {
+    "roleCode": "MANAGER",
+    "roleName": "MANAGER"
+  },
+  {
+    "roleCode": "AGENT",
+    "roleName": "AGENT"
+  }
+]

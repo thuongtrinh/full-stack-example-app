@@ -1,0 +1,47 @@
+<mat-card>
+    <h3>Your profile</h3>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container text-center">
+                <img src="./../../../assets/images/profile-picture.png" alt="profile_image" class="profile-image">
+                <h1 class="mt20">Thuong Trinh</h1>
+                <p class="text-uppercase">&nbsp;</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <table class="table">
+                        <tr>
+                            <td>Name</td>
+                            <td>{{user?.lastName + " " + user?.firstName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td>{{ user?.userName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{ user?.email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>{{ user?.phone }}</td>
+                        </tr>
+                        <tr>
+                            <td>Status account</td>
+                            <td>{{ user?.enabled ? 'ACTIVE' : 'DISABLED'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Authorizes</td>
+                            <td>{{ roleStr }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">Share</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,20 @@
+.truncate {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.example-header-image {
+  background-image: url(../../../../assets/images/exam.png);
+  background-size: cover;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}

@@ -24,6 +24,9 @@ hs_err_pid*
 server-manager-api/.idea/
 server-manager-api/target/
 
+exam-portal-api/.idea/
+exam-portal-app/target/
+
 #---------------------------------------------------------------------------------------
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
@@ -32,17 +35,25 @@ server-manager-api/target/
 server-manager-app/dist
 server-manager-app/tmp
 server-manager-app/out-tsc
+
+exam-portal-app/dist
+exam-portal-app/tmp
+exam-portal-app/out-tsc
+
 # Only exists if Bazel was run
 server-manager-app/bazel-out
+exam-portal-app/bazel-out
 
 # dependencies
 server-manager-app/node_modules
+exam-portal-app/node_modules
 
 # profiling files
 chrome-profiler-events*.json
 
 # IDEs and editors
 server-manager-app/.idea
+exam-portal-app/.idea
 .project
 .classpath
 .c9/

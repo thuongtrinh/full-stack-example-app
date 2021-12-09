@@ -1,0 +1,52 @@
+[
+  {
+    "email": "daniel@getarrays.com",
+    "profile": "https://bootdey.com/img/Content/avatar/avatar1.png",
+    "firstName": "Daniel",
+    "lastName": "Craig",
+    "phone": "4570090332",
+    "enabled": true,
+    "password": "test",
+    "userName": "txt001"
+  },
+  {
+    "email": "dave@getarrays.com",
+    "profile": "https://bootdey.com/img/Content/avatar/avatar2.png",
+    "firstName": "Andy",
+    "lastName": "Maxwell",
+    "phone": "4570090332",
+    "enabled": true,
+    "password": "test",
+    "userName": "txt002"
+  },
+  {
+    "email": "christine@getarraYs.com",
+    "profile": "https://bootdey.com/img/Content/avatar/avatar3.png",
+    "firstName": "Christine",
+    "lastName": "Smith",
+    "phone": "4570090332",
+    "enabled": true,
+    "password": "test",
+    "userName": "txt003"
+  },
+  {
+    "email": "dave@getarrays.com",
+    "profile": "https://bootdey.com/img/Content/avatar/avatar7.png",
+    "firstName": "Dave",
+    "lastName": "Rogers",
+    "phone": "4570090332",
+    "enabled": true,
+    "password": "test",
+    "userName": "txt004"
+  },
+  {
+    "email": "dave@getarrays.com",
+    "profile": "https://bootdey.com/img/Content/avatar/avatar8.png",
+    "firstName": "Alice",
+    "lastName": "Maxwell",
+    "phone": "4570090332",
+    "enabled": false,
+    "password": "test",
+    "userName": "txt005"
+  }
+]
