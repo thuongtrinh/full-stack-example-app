@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.txt</groupId>
-    <artifactId>employeemanager</artifactId>
+    <artifactId>employee-manager-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>employeemanager</name>
+    <name>employee-manager-api</name>
     <description>Employee Manager App</description>
 
     <properties>

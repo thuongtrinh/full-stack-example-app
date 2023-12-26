@@ -395,3 +395,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignore cache created with the Angular CLI.
+.angular/
