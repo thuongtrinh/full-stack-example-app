@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { Question } from 'src/app/interfaces/question';
 import { Quiz } from 'src/app/interfaces/quiz';
 import { QuestionService } from 'src/app/services/question.service';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 @Component({
   selector: 'app-update-question',
