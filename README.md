@@ -1,1 +1,1 @@
-Example: FE angular and BE springboot rest
+Demo: FE angular/React and BE spring-boot rest
