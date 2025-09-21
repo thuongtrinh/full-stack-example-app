@@ -24,8 +24,8 @@ hs_err_pid*
 server-manager-api/.idea/
 server-manager-api/target/
 
-exam-portal-api/.idea/
-exam-portal-app/target/
+.idea/
+target/
 
 #---------------------------------------------------------------------------------------
 
