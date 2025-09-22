@@ -1,0 +1,45 @@
+h2 {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.manage-doctor-container {
+  margin-top: 10px;
+  margin-bottom: 150px;
+
+  .more-infor {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    label {
+      font-size: medium;
+      margin-bottom: 5px;
+    }
+
+    .content-left {
+      width: 30%;
+    }
+
+    .content-right {
+      width: 70%;
+    }
+  }
+
+  .more-doctor-info {
+    margin-bottom: 35px;
+    .form-group {
+      margin-top: 25px;
+    }
+
+    label {
+      font-size: medium;
+    }
+  }
+
+  .btn-md-save {
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

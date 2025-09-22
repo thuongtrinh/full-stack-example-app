@@ -1,0 +1,152 @@
+@import "../../styles/common.scss";
+
+.section-share {
+  &.section-specialty {
+    background-color: #f5f5f5;
+  }
+
+  &.section-meidical-specialty,
+  &.section-handbook {
+    margin-top: 50px;
+  }
+
+  &.section-outstanding-doctor {
+    background-color: #f5f5f5;
+    margin-top: 50px;
+  }
+
+  .section-container {
+    .section-body {
+      .specialty-content {
+        cursor: pointer;
+        .img-specialty {
+          width: 320px;
+          height: 200px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          background-color: #eee;
+
+          &.section-specialty {
+            background-image: url("../../assets/images/shutterstock_01.jpg");
+          }
+
+          &.section-meidical-specialty {
+            background-image: url("../../assets/images/hospital-building.jpg");
+          }
+
+          &.section-handbook {
+            background-image: url("../../assets/images/handbook-doctor.jpg");
+          }
+        }
+
+        .bg-image-doctor {
+          width: 170px;
+          height: 170px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          background-color: #eee;
+          border-radius: 50%;
+
+          &.section-outstanding-doctor {
+            background-image: url("../../assets/images/doctor.jpg");
+          }
+        }
+      }
+
+      .position {
+        margin-top: 10px;
+        font-size: 1.2rem;
+
+        .position-detail {
+          margin-top: 2px;
+          font-size: 0.9rem;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.section-container {
+  height: 300px;
+  padding: 5px;
+
+  .section-header {
+    margin-bottom: 20px;
+
+    .specialty-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+
+    .btn-show-more {
+      float: right;
+      padding: 5px;
+      border: 0px;
+      color: white;
+      background-color: rgb(202, 200, 200);
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+      text-transform: uppercase;
+
+      &:hover {
+        color: black;
+        background-color: yellow;
+      }
+    }
+  }
+
+  .section-body {
+    padding: 5px;
+
+    .specialty-content {
+      text-align: center;
+      text-align: -webkit-center;
+
+      .specialty-name {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.section-about {
+  margin: 30px 0px;
+
+  .section-about-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .section-about-content {
+    display: flex;
+    gap: 20px;
+
+    .content-left {
+      width: 50%;
+    }
+
+    .content-right {
+      width: 50%;
+
+      p {
+        text-align: justify;
+        font-style: italic;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.home-footer {
+  margin-bottom: 40px;
+  background-color: #f5f5f5;
+  font-style: italic;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}

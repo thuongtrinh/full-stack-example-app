@@ -1,0 +1,84 @@
+@import "../../styles/common.scss";
+
+.header-container {
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  background-color: $colormain;
+  color: $common-text-color;
+  height: 40px;
+  position: relative;
+
+  .header-right {
+    display: flex;
+
+    .welcome {
+      line-height: 40px;
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    .btn-logout {
+      color: $common-text-color;
+      line-height: 40px;
+      height: 40px;
+      padding: 0 10px;
+      margin-left: 5px;
+      &:hover {
+        background-color: darken($colormain, 5);
+      }
+      i {
+        font-size: $base-size + 1px;
+      }
+    }
+
+    .content-lang {
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      font-weight: 600;
+      font-size: medium;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 40px;
+
+      .lang-vi {
+        line-height: 28px;
+        cursor: pointer;
+        width: 40px;
+        opacity: 0.2;
+        &:hover {
+          color: #ff0000;
+          opacity: 1;
+        }
+
+        &.active-vi {
+          color: red;
+          opacity: 1;
+          background-color: lightgray;
+          border-radius: 40px 0 0 40px;
+        }
+      }
+
+      .lang-en {
+        line-height: 28px;
+        cursor: pointer;
+        width: 40px;
+        opacity: 0.2;
+        &:hover {
+          color: blue;
+          opacity: 1;
+        }
+
+        &.active-en {
+          color: blue;
+          opacity: 1;
+          background-color: lightgray;
+          border-radius: 0 40px 40px 0;
+        }
+      }
+    }
+  }
+}

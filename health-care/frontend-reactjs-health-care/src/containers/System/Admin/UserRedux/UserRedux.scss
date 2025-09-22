@@ -1,0 +1,78 @@
+h2 {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.user-redux-container {
+  .row {
+    margin-bottom: 15px;
+
+    label {
+      font-style: italic;
+    }
+  }
+
+  .btn-save {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .btn-reset {
+    margin-left: 15px;
+  }
+
+  .preview-img-container {
+    .label-upload {
+      padding: 5px;
+      border-radius: 3px;
+      background: #ddd;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .preview-image {
+      height: 50px;
+      width: 100%;
+      border: 1px solid #ddd;
+      background: center center no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+
+  th {
+    background-color: #7d99b1; /* Bootstrap Green */
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Style for action buttons */
+  .action-btn {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
