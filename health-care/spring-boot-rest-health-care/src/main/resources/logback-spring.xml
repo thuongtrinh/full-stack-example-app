@@ -12,7 +12,7 @@
     </appender>
     <logger name="org.apache" level="INFO"/>
     <logger name="com.google" level="INFO"/>
-    <logger name="com.txt.rest.simple" level="INFO"/>
+    <logger name="com.txt.rest.health.care" level="INFO"/>
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
@@ -24,7 +24,7 @@
             </http>
             <format class="com.github.loki4j.logback.ProtobufEncoder">
                 <label>
-                    <pattern>app=spring-boot-rest-example,host=${HOSTNAME},level=%level</pattern>
+                    <pattern>app=spring-boot-rest-health-care,host=${HOSTNAME},level=%level</pattern>
                 </label>
                 <message>
                     <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} l=%level h=${HOSTNAME} c=%logger{20} t=%thread |
@@ -36,7 +36,7 @@
         </appender>
         <logger name="org.apache" level="INFO"/>
         <logger name="com.google" level="INFO"/>
-        <logger name="com.txt.rest.simple" level="INFO"/>
+        <logger name="com.txt.rest.health.care" level="INFO"/>
         <root level="INFO">
             <appender-ref ref="LOKI"/>
         </root>

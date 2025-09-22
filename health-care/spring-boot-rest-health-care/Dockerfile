@@ -1,5 +1,5 @@
 
-FROM openjdk:8-jre
+FROM openjdk:17-jdk
 
 MAINTAINER TXT
 
@@ -7,8 +7,8 @@ USER root
 
 ENV ROOT_DIR /app
 
-ENV FUll_APP_NAME spring-boot-rest-example*.jar
-ENV APP_NAME spring-boot-rest-example.jar
+ENV FUll_APP_NAME spring-boot-rest-health-care*.jar
+ENV APP_NAME spring-boot-rest-health-care.jar
 ENV APP_HOME ${ROOT_DIR}/${APP_NAME}
 
 ENV APP_CONFIG_DIR ${ROOT_DIR}/config
