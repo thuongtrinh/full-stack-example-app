@@ -53,9 +53,8 @@ public class MailServiceImpl implements MailService {
 
         VerifyBookingDTO verifyBookingDTO = VerifyBookingDTO.builder()
                 .templateName(Constants.TEMPLATE_HEALTH_CARE_BOOKING_VERIFY)
-//                .emailTo(List.of(booking.getUserPatient().getEmail()))
-                .emailTo(List.of("trinhxuan92@gmail.com"))
-//                .emailCc(List.of(env.getProperty(Constants.MailConstant.EMAIL_CC_RULE)))
+                .emailTo(List.of(booking.getUserPatient().getEmail()))
+                .emailCc(List.of(env.getProperty(Constants.MailConstant.EMAIL_CC_RULE)))
                 .emailSubject(Constants.SUBJECT_MAIL_VERIFY_BOOKING)
                 .params(params)
                 .build();
