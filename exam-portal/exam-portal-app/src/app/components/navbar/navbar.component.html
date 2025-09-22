@@ -9,14 +9,14 @@
     <a [routerLink]="'/login'" *ngIf="!isLoggedIn"  mat-icon-button class="example-icon favorite-icon" aria-label="icon-button with heart icon">
       Login
     </a>
-    <a [routerLink]="'/signup'" *ngIf="!isLoggedIn"  mat-icon-button class="example-icon favorite-icon mr-20 ml-20" aria-label="icon-button with login icon">
+    <a [routerLink]="'/signup'" *ngIf="!isLoggedIn"  mat-icon-button class="example-icon favorite-icon mr-50 ml-50" aria-label="icon-button with login icon">
         Register
     </a>
 
-    <a *ngIf="isLoggedIn && user" [ngStyle]="{'color': 'aqua'}" mat-icon-button class="example-icon favorite-icon mr-20 ml-20" aria-label="icon-button with login icon">
+    <a *ngIf="isLoggedIn && user" [ngStyle]="{'color': 'aqua'}" mat-icon-button class="example-icon favorite-icon mr-50 ml-50" aria-label="icon-button with login icon">
       {{ user.userName }}
     </a>
-    <a *ngIf="isLoggedIn"  (click)="logout()" mat-icon-button class="example-icon favorite-icon mr-20 ml-20" aria-label="icon-button with login icon">
+    <a *ngIf="isLoggedIn"  (click)="logout()" mat-icon-button class="example-icon favorite-icon mr-50 ml-50" aria-label="icon-button with login icon">
       Logout
     </a>
   </mat-toolbar>
