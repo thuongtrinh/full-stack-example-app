@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-rest-health-care
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    protocol: smtps
+    username: healthcare-test
+    password: xxx xxx xxxx xxxx
+    properties:
+      mail:
+        transport.protocol: smtps
+        smtps:
+          auth: true
+          starttls.enable: true
+          timeout: 9000
+
+mail:
+  from: noreply.healthcare@gmail.com
+  cc: test@gmail.com
+
+urls:
+  ui-domain-health-care: http://localhost:3000/health-care/verify-booking-appointment?doctorId=%s&patientId=%s&token=%s
