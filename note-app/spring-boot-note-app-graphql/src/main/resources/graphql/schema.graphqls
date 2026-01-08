@@ -1,0 +1,63 @@
+type Query {
+    folders: [Folder]
+    folderById(id: ID!): Folder
+    noteById(id: ID!): Note
+    authors: [Author]
+    authorById(id: ID!): Author
+}
+
+type Mutation {
+    createFolder(name: String!, authorId: ID!): Folder
+    addNote(note: NoteInput!): Note
+    updateNote(id: ID!, note: NoteInput!): Note
+    register(name: String!, authorId: ID!): Author
+    registerUser(user: UserDTO!): UserInfo
+    #    deleteArticle(id: ID!): Article
+}
+
+input NoteInput {
+    content: String
+    authorId: ID
+    folderId: ID
+}
+
+input UserDTO {
+    uid: String
+    email: String
+    displayName: String
+}
+
+type Author {
+    id: ID!
+    name: String!
+    uid: String!
+    email: String!
+    lastLogin: String
+    createdAt: String
+    updatedAt: String
+}
+
+type Folder {
+    id: ID!
+    name: String!
+    createdAt: String!
+    author: Author
+    notes: [Note]
+}
+
+type Note {
+    id: ID!
+    content: String
+    createdAt: String
+    updatedAt: String
+}
+
+type UserInfo {
+    id: ID!
+    userId: String!
+    email: String
+    name: String
+    bio: String
+    createdAt: String
+    lastLogin: String
+}

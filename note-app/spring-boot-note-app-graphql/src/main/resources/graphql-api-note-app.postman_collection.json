@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "d5562164-273e-4801-b21a-057f9155b05f",
+		"name": "graphql-api-note-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2782954"
+	},
+	"item": [
+		{
+			"name": "note-app-graphql",
+			"item": [
+				{
+					"name": "authors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzOGVhNmEwNDA4YjBjYzVkYTE4OWRmYzg4ODgyZDBmMWI3ZmJmMGUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVGh1b25nIFRyaW5oIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0llWVdVVHNWdmFVdHJ6dWU1aVNoNDc3d2F6aVVIV082MHN0dUp1bkNhbHY5VDNMRVpWemc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhY3QtYXBwLXR4IiwiYXVkIjoicmVhY3QtYXBwLXR4IiwiYXV0aF90aW1lIjoxNzY3NDQ0NjQ1LCJ1c2VyX2lkIjoiUHVlZVgxWlNUbVFSdURrV1lvMDducUhxNGcwMiIsInN1YiI6IlB1ZWVYMVpTVG1RUnVEa1dZbzA3bnFIcTRnMDIiLCJpYXQiOjE3Njc0NDg2MzksImV4cCI6MTc2NzQ1MjIzOSwiZW1haWwiOiJ0cmluaHh1YW45MkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExNzYwODk1Mjg1MTE2NDczOTIxMyJdLCJlbWFpbCI6WyJ0cmluaHh1YW45MkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.NoihUZ2JI_sD-p2l4EFKdqJliwzRsdKO-ZuKefe4zyEJEPf3BRg4-4rGDjssXR63qJ5DaZAa8Vh43KnpLpQrOEkeI1CHlsI8_93HI08OdPqVYngios9jgfBJjWXgW-v1DVW4eQlG6NEkvGsP9n_MSqfAF7d_F1qGncaaIdXGEz8qOLjF8CVvgCrVepZgKm1R4Etp2CUlk-jUgrXU-bN-0oULmcV__TU7XzrBv_YJe2uAwRnMBuLUf135sClZvhJyhvn2ZssYsYRJD9XYsLeg5vftu8DWgKCJCJU7HyKVsE9e7-CEAYcwCh1yWXUPLb8CCc547s9PhX-FSJWwrGntHA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  authors{\r\n    id\r\n    name\r\n    createdAt\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "folders",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  folders{\r\n    id\r\n    name\r\n    createdAt\r\n    author{id, name}\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "folderById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  folderById(id: 52) {\r\n    id\r\n    name\r\n    createdAt\r\n    author{id, name}\r\n    notes {id, content, updatedAt}\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "noteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzOGVhNmEwNDA4YjBjYzVkYTE4OWRmYzg4ODgyZDBmMWI3ZmJmMGUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVGh1b25nIFRyaW5oIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0llWVdVVHNWdmFVdHJ6dWU1aVNoNDc3d2F6aVVIV082MHN0dUp1bkNhbHY5VDNMRVpWemc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhY3QtYXBwLXR4IiwiYXVkIjoicmVhY3QtYXBwLXR4IiwiYXV0aF90aW1lIjoxNzY3NjExOTI0LCJ1c2VyX2lkIjoiUHVlZVgxWlNUbVFSdURrV1lvMDducUhxNGcwMiIsInN1YiI6IlB1ZWVYMVpTVG1RUnVEa1dZbzA3bnFIcTRnMDIiLCJpYXQiOjE3Njc2MTU2NjcsImV4cCI6MTc2NzYxOTI2NywiZW1haWwiOiJ0cmluaHh1YW45MkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExNzYwODk1Mjg1MTE2NDczOTIxMyJdLCJlbWFpbCI6WyJ0cmluaHh1YW45MkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.NIciI--qMCH3i3vQOkiERomgmp-rsfvn17e3kwehjJ4tMVXl5Q1yE1LXyXBckPiYX-7eHRkW94knmHi6VEQ75MwJd1XLYHjKfwihqG-ajWCmKowq-G8l_nQa5Ebek1qxrvQyZ2ljrmfp62RDFHINDgIsaQHaltTuVdpVBzFEBIDGX43G8izX4qYY9CnRYrHFJtt1bq-U_6LPHOG1PQF5fthYX4fQVu-w18feTd7as_oHiYah7NA5dgBuKoAJ6pcgXDWwxyfmvThm3dzG6kKDsFj-FBuo-CWx60xMcC9DtZUbFILds6Nt-LwBEK6LGva6TWJ8rZducaqMgKFOxhry4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  noteById(id: 52) {\r\n    id\r\n    content\r\n    createdAt\r\n    updatedAt\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  authorById(id: 52) {\r\n   id\r\n    name\r\n    createdAt\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphiql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphiql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createFolder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  createFolder (\r\n    name: \"folders #24\",\r\n    authorId: 102\r\n    )\r\n    {\r\n      id name author { id  name uid }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  addNote (\r\n    note: {\r\n        content: \"content 111\"\r\n        authorId: 102\r\n        folderId: 53\r\n    }\r\n    )\r\n    {\r\n      id content createdAt updatedAt \r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  updateNote (\r\n    id: 54\r\n    note: {\r\n        content: \"content 002\"\r\n        authorId: 52\r\n        folderId: 53\r\n    }\r\n    )\r\n    {\r\n      id content createdAt updatedAt \r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/get-token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/get-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"get-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzOGVhNmEwNDA4YjBjYzVkYTE4OWRmYzg4ODgyZDBmMWI3ZmJmMGUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVGh1b25nIFRyaW5oIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0llWVdVVHNWdmFVdHJ6dWU1aVNoNDc3d2F6aVVIV082MHN0dUp1bkNhbHY5VDNMRVpWemc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmVhY3QtYXBwLXR4IiwiYXVkIjoicmVhY3QtYXBwLXR4IiwiYXV0aF90aW1lIjoxNzY3NDQzNDk3LCJ1c2VyX2lkIjoiUHVlZVgxWlNUbVFSdURrV1lvMDducUhxNGcwMiIsInN1YiI6IlB1ZWVYMVpTVG1RUnVEa1dZbzA3bnFIcTRnMDIiLCJpYXQiOjE3Njc0NDM0OTcsImV4cCI6MTc2NzQ0NzA5NywiZW1haWwiOiJ0cmluaHh1YW45MkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExNzYwODk1Mjg1MTE2NDczOTIxMyJdLCJlbWFpbCI6WyJ0cmluaHh1YW45MkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.cdP4gJjXwyfPRmPzVCvC2_nFPNr9zDxs3Zyq5sQSI0EEVTKy-flzuxMnRox9oUtnzmV5PJu_ZljSasrbuMbMdOcuLmmf0Rcf-rNIb49getPgKDb7Kh4Ku-Sth-MMl5Am5axeqUsf6w2CBaS_4e4oZIyktC_UrjtiJL0D3RmR4qA2o0K-ftW_FTzrBsgE-btMH8wknAJ6loda907oc0Cv7KiKrHco7IqqnVzfYy-oLvAHkPeGXYMdzCyuhQltOx3PewZsSrX2h-6EBR66mVP1eF760iWq03Eq7LN9trWLeN5TO78n9qPf6u9rprS4mCodQb5BpY2bxw7FLUmDI5i76w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  registerUser (\r\n    user: {\r\n        uid: \"xxx2332323\"\r\n        email: \"aaa@gmail.com\"\r\n        displayName: \"txt\"\r\n    }\r\n    )\r\n    {\r\n      id userId email name createdAt lastLogin \r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

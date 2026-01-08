@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    web: DEBUG
+    sql: DEBUG
+    com.txt: DEBUG
+
+spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
+#          issuer-uri: https://securetoken.google.com/react-app-tx
+#          audiences: react-app-tx
+#          jws-algorithms: RS256
+  datasource:
+    url: jdbc:postgresql://localhost:5432/noteapp
+    username: postgres
+    password: 123456
+  jpa:
+    generate-ddl: true
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+  graphql:
+    graphiql:
+      enabled: true
+    path: /graphql
+  jackson:
+    serialization:
+      indent-output: true
